@@ -1,7 +1,7 @@
 let computerNumber
 let userNumbers = []
 
-// a função init
+// a função init inicializadora 
 function init() {
     computerNumber = Math.floor(Math.random() * 100 + 1)
     console.log(computerNumber);
