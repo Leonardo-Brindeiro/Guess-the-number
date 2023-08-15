@@ -3,6 +3,12 @@ let userNumbers = []
 let attempts = 0
 let maxguesses = 10
 
+
+
+function newGame() {
+    window.location.reload()
+}
+
 // a função init inicializadora vou jogar ela no meu body la no html 
 function init() {
     computerNumber = Math.floor(Math.random() * 100 + 1) // guardando dentro de uma variável 
@@ -34,9 +40,13 @@ function compareNumbers() {
             document.getElementById('textOutput').innerHTML = 'Congratulations'
             attempts++
             document.getElementById('attempts').innerHTML = attempts
+            document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
         }
     }
     else {
+
         document.getElementById('textOutput').innerHTML = 'You Lose! + The number computer was ' + computerNumber
+        document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
     }
+
 }
